@@ -1,0 +1,37 @@
+.__header{
+    /*@include flex(row, space-between, center);*/
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    height: 68px;
+    max-width: 95%;
+    width: 100%;
+    margin: 0 auto;
+    @media screen and (max-width: 900px){
+        height: 40px;
+    }
+        .__header--logo{
+        display: flex;
+            h1{
+                color: #FF6060;
+                font-size: 0%;
+                font-family: 'Montserrat Ace Medium', Times, serif;
+                img{
+                    height: 60%;
+                    @media screen and (max-width: 700px){
+                        height: 40px;
+                    }
+                }
+            }
+        }
+        .__header--nav{
+        display: flex;
+        text-wrap: nowrap;
+        justify-content: center;
+            li{
+                display:inline;  
+                padding-left: 57px;      
+            }
+        }
+}
