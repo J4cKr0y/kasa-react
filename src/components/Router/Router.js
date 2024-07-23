@@ -1,21 +1,18 @@
-
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Home from '../../pages/Home';
 import About from '../../pages/About';
 import Fiche from '../../pages/Fiche';
 import NotFound from '../../pages/NotFound';
 
 const AppRouter = () => {
-    return (
-        
+    return (   
     <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/fiche/:id" element={<Fiche />} />
         <Route path="*" element={<NotFound />} />
     </Routes>
-
     );
 };
 

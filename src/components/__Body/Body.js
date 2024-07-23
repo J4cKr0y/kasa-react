@@ -5,14 +5,17 @@ import data from '../../logements.json';
 
 const Body = () => {
     return (
-        <div>
-            {data.map((logement) => (
-                <div key={logement.id}>
-                    <Link to={`/fiche/${logement.id}`}>
-                        <img src={logement.cover} alt={logement.title} />
-                    </Link>
-                </div>
-            ))}
+        <div className='__body'>
+            <div className='__body--banner1'></div>
+            <div className='__body--contain_thb'>
+                {data.map((logement) => (
+                    <div key={logement.id} className='__body--contain_thb--thumb'>
+                        <Link to={`/fiche/${logement.id}`}>
+                            <img src={logement.cover} alt={logement.title} />
+                        </Link>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };

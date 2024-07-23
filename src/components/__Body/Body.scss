@@ -1,0 +1,45 @@
+@import '../SASS/main';
+::-webkit-scrollbar {
+    display: none;
+}
+.__body{
+    @include flex(column, flex-start, center);
+    max-width: 375px;
+    width: 100%;
+    height: 945.9px; 
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+
+    .__body--banner1 {
+        @include flex(column, flex-start, center);
+        width: 89.3%;
+        height: 111px;
+        background-image: $img_banner1;
+        margin-top: 27px;
+    }
+    .__body--contain_thb {
+        @include flex(column, flex-start, center);
+        width: 89.3%;
+        height: 938px;
+        margin: 27px 5.3% 27px 5.3%;
+        overflow: overlay;
+
+        .__body--contain_thb--thumb {
+            @include flex(column, flex-start, center);
+            width: 100%;
+            height: 340px;
+            background-color: $primary-color;
+            margin-top: 20px;
+            
+                a {
+                    width: 100%;
+                    height: 100%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px;
+                    }
+                }
+        }
+    }
+}
