@@ -1,16 +1,17 @@
 /*import './App.scss';*/
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import AppRouter from './Router/Router';
 import Footer from './__Footer/Footer';
 import Header from './__Header/Header'
 
 const App = () => {
     return (
-        <div>
-            <Header />
-            <AppRouter />
-            <Footer />
-        </div>
+            <Router>
+                <Header />
+                <AppRouter />
+                <Footer />
+            </Router>
     );
 };
 

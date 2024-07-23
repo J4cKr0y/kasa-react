@@ -1,7 +1,20 @@
 import './Body.scss'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import data from '../../logements.json'; 
 
-function Body() {
-   
-}
+const Body = () => {
+    return (
+        <div>
+            {data.map((logement) => (
+                <div key={logement.id}>
+                    <Link to={`/fiche/${logement.id}`}>
+                        <img src={logement.cover} alt={logement.title} />
+                    </Link>
+                </div>
+            ))}
+        </div>
+    );
+};
 
-export default Body
+export default Body;

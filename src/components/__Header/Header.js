@@ -1,5 +1,6 @@
 import './Header.scss'
 import logo_kasa from '../../img/logo_kasa.svg';
+import { Link } from 'react-router-dom';
 
 function Header() {
     const title = 'Kasa'
@@ -10,15 +11,11 @@ function Header() {
         </div>
         <nav className='__header--nav'>
             <ul>
-                <li>
-                    
-                        Accueil
-                    
+                <li>   
+                    <Link to="/">Home</Link>   
                 </li>
-                <li>
-                    
-                        À propos
-                    
+                <li>   
+                <Link to="/">À propos </Link>
                 </li>
             </ul>
         </nav>
