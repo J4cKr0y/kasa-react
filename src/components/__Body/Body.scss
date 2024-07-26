@@ -9,28 +9,40 @@
     height: 945.9px; 
     -ms-overflow-style: none;  
     scrollbar-width: none;  
+    
 
     .__body--banner1 {
-        @include flex(column, flex-start, center);
+        @include flex(column, center, first baseline);
         width: 89.3%;
         height: 111px;
-        background-image: $img_banner1;
+        background-color: $primary-color;
+        //background-image: url($img_banner1);
+        border: 1px solid $primary-color;
+        overflow: overlay;
         margin-top: 27px;
+        border-radius: 10px;
+        color: $ft_secondary-color;
+    }
+    .__body--banner1::before {
+        content: $slogan;
+        padding-left: 2%;
+        font-size: 24px;
+        font-weight: 700;
+        font-family: $font;
     }
     .__body--contain_thb {
         @include flex(column, flex-start, center);
         width: 89.3%;
         height: 938px;
-        margin: 27px 5.3% 27px 5.3%;
+        margin: 0px 5.3% 20px 5.3%;
         overflow: overlay;
 
         .__body--contain_thb--thumb {
             @include flex(column, flex-start, center);
             width: 100%;
             height: 340px;
-            background-color: $primary-color;
             margin-top: 20px;
-            
+            position: relative;      
                 a {
                     width: 100%;
                     height: 100%;
@@ -40,6 +52,19 @@
                         border-radius: 10px;
                     }
                 }
+        }
+        .__body--contain_thb--thumb::before {
+            color:$ft_secondary-color;
+            content: attr(data-imgtitle);
+            text-shadow: 2px 2px 2px $ft_primary-color;
+            padding-left: 2%;
+            font-size: 18px;
+            font-weight: 700;
+            font-family: $font;
+            position: absolute;
+            bottom: 5%; 
+            left: 5%;
+        
         }
     }
 }

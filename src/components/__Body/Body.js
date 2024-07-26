@@ -9,7 +9,7 @@ const Body = () => {
             <div className='__body--banner1'></div>
             <div className='__body--contain_thb'>
                 {data.map((logement) => (
-                    <div key={logement.id} className='__body--contain_thb--thumb'>
+                    <div key={logement.id} data-imgtitle={logement.title} className='__body--contain_thb--thumb'>
                         <Link to={`/fiche/${logement.id}`}>
                             <img src={logement.cover} alt={logement.title} />
                         </Link>

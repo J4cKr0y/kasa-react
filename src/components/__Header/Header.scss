@@ -1,36 +1,32 @@
-@import '../SASS/variables';
 @import '../SASS/mixins';
+
 .__header{
-    @include flex(row, space-between, center);
-    height: 68px;
-    max-width: 95%;
-    width: 100%;
-    margin: 0 auto;
-    @media screen and (max-width: 900px){
-        height: 40px;
-    }
+    @include flex(row, center, center);
+    max-width: 375px;
+    width: 89.3%;
+    height: 46.9px;
+    margin-top: 20px;
+    
         .__header--logo{
         display: flex;
-        padding: 1%;
             h1{
-                color: $primary-color;
                 font-size: 0%;
-                font-family: $font;
                 img{
-                    height: 60%;
-                    @media screen and (max-width: 700px){
-                        height: 40px;
-                    }
+                    height: 46.8px;
                 }
             }
         }
         .__header--nav{
-        display: flex;
-        text-wrap: nowrap;
-        justify-content: center;
-            li{
-                display:inline;  
-                padding-left: 57px;      
-            }
+            display: flex;
+            text-wrap: nowrap;
+            justify-content: right;
+            height: 46.8px;
+                li{
+                    display: inline;
+                        }
+                li:nth-child(1){
+                    padding-right: 2rem;
+                }
+                
         }
 }
