@@ -1,0 +1,85 @@
+@import '../SASS/variables';
+
+.__Sheet{
+    max-width: 375px;
+    width: 100%;
+}
+.__Sheet--carousel{
+    margin-top: 25px;
+}
+.__Sheet--carousel-image{
+    width: 89.3%;
+    height: 255px;
+    border-radius: 10px;
+}
+.__Sheet--carousel-button{
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 25px;
+}
+.__Sheet--carousel-button:nth-child(1){
+    position: relative;
+    border: none;
+    background-color: transparent;
+    color: white;
+    left: 6.5%;
+    bottom: 120px;
+}
+.__Sheet--carousel-button:nth-child(3){
+    position: relative;
+    left: 44.5%;
+    bottom: 155px;
+    color: white;
+}
+.__Sheet--carousel-counter {
+    position: relative;
+    bottom: 65px;
+    color: white;
+}
+.__Sheet h1 {
+    text-align: left;
+    text-indent: 2rem;
+    margin-top: -50px;
+    font-family: $font;
+    color: $primary-color;
+    font-weight: 500;
+    font-size: 18px;
+}
+.__Sheet h2 {
+    text-align: left;
+    text-indent: 2rem;
+    margin-top: -5px;
+    font-family: $font;
+    color: $ft_primary-color;
+    font-weight: 500;
+    font-size: 14px;
+}
+.tags{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    margin-left: 2rem;
+    
+}
+.tag-button{
+    display: flex;
+    background-color: $primary-color;
+    width: 22.4%;
+    height: 18px;
+    flex-wrap: nowrap;
+    border-radius: 5px;
+    font-family: $font;
+    color: $ft_secondary-color;
+    font-weight: 700;
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.StarRating{
+    display: flex;
+    align-content: left;
+    width: 50%;
+    margin: 25px 2rem 20px;
+}

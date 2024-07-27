@@ -3,9 +3,9 @@ import Body from '../components/__Body/Body';
 
 const Home = () => {
     return (
-        <div>
+        <main>
             <Body />
-        </div>
+        </main>
     );
 };
 
