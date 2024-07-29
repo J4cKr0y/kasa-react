@@ -1,36 +1,36 @@
-@import '../SASS/variables';
+@import '../SASS/main';
 
 .__Sheet{
+    @include flex(column, flex-start, flex-start);
     max-width: 375px;
     width: 100%;
 }
 .__Sheet--carousel{
-    margin-top: 25px;
+    @include flex(column, flex-start, center);
+    object-fit: cover;
+    overflow: hidden;
 }
 .__Sheet--carousel-image{
     width: 89.3%;
     height: 255px;
     border-radius: 10px;
+    background-color: greenyellow;
 }
 .__Sheet--carousel-button{
     border: none;
     background-color: transparent;
     color: white;
-    font-size: 25px;
+    font-size: 24px;
 }
 .__Sheet--carousel-button:nth-child(1){
     position: relative;
-    border: none;
-    background-color: transparent;
-    color: white;
-    left: 6.5%;
-    bottom: 120px;
+    right: 40%;
+    top: 150px;
 }
 .__Sheet--carousel-button:nth-child(3){
     position: relative;
-    left: 44.5%;
-    bottom: 155px;
-    color: white;
+    left: 40%;
+    bottom: 140px;
 }
 .__Sheet--carousel-counter {
     position: relative;
@@ -38,8 +38,9 @@
     color: white;
 }
 .__Sheet h1 {
+    @include flex(column, flex-start, flex-start);
     text-align: left;
-    text-indent: 2rem;
+    text-indent: 1.2rem;
     margin-top: -50px;
     font-family: $font;
     color: $primary-color;
@@ -47,9 +48,10 @@
     font-size: 18px;
 }
 .__Sheet h2 {
+    @include flex(column, flex-start, flex-start);
     text-align: left;
-    text-indent: 2rem;
-    margin-top: -5px;
+
+    margin: 0 0 10px 5%;
     font-family: $font;
     color: $ft_primary-color;
     font-weight: 500;
@@ -58,8 +60,9 @@
 .tags{
     display: flex;
     flex-direction: row;
+    width: 100%;
     gap: 5%;
-    margin-left: 2rem;
+    margin-left: 5%;
     
 }
 .tag-button{
@@ -76,10 +79,55 @@
     justify-content: center;
     align-items: center;
 }
-
 .StarRating{
     display: flex;
     align-content: left;
     width: 50%;
-    margin: 25px 2rem 20px;
+    margin: 25px 10% 20px;
+}
+.host{
+    display: flex;
+    flex-direction: row;
+    width:52%;
+    font-family: $font;
+    color: $primary-color;
+    font-weight: 500;
+    font-size: 14px; 
+    text-align: right;
+    align-content: center;
+
+}
+.host p{
+    margin-left: 60%;
+}
+.hostPicture{
+    width: 32px; 
+    height: 32px; 
+    object-fit: cover; 
+    margin: 15px 5%;
+    clip-path: circle(50%);
+}
+.tag-button[data-name="description"]{
+    display: flex;
+    justify-content: space-between;
+    width: 89.3%;
+    height: 30px;
+    font-size: 13px;
+    text-indent: 0.6rem;
+    margin-left: 5%;
+}
+.rotate-symbol {
+    display: flex;
+    font-size: 30px;
+    margin-right: 4%;
+   justify-content: right;
+   transform-origin: 70%;
+    transition: transform 0.3s ease;
+}
+
+.rotate-symbol.rotated {
+    transform: rotate(180deg);
+}
+.description{
+    display: none;
 }

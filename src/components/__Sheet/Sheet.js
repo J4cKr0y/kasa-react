@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../../logements.json'; 
 import StarRating from './StarRating';
+import Carousel from './Carousel'; 
+import RotatingSymbol from './RotatingSymbol'; 
 import './Sheet.scss'
 
 const Sheet = () => {
@@ -26,12 +28,12 @@ const Sheet = () => {
 
     return (
         <div className="__Sheet">
-            <div className="__Sheet--carousel">
-                <button onClick={prevSlide} className="__Sheet--carousel-button">&#10094;</button>
-                <img src={logement.pictures[currentIndex]} alt={`Slide ${currentIndex + 1}`} className="__Sheet--carousel-image" />
-                <button onClick={nextSlide} className="__Sheet--carousel-button">&#10095;</button>
-                <div className="__Sheet--carousel-counter">{currentIndex + 1}/{logement.pictures.length}</div>
-            </div>
+            <Carousel 
+                images={logement.pictures} 
+                currentIndex={currentIndex} 
+                nextSlide={nextSlide} 
+                prevSlide={prevSlide} 
+            />
 
             <h1>{logement.title}</h1> 
             <h2>{logement.location}</h2>
@@ -40,11 +42,17 @@ const Sheet = () => {
                 <div key={tag} className="tag-button">{tag}</div>
                 ))}
             </div>
-            <StarRating rating={logement.rating} size='15' />
-            {logement.host.name} <img src={logement.host.picture} alt="{logement.host.name}"/>
             
-  
-            {logement.description} {logement.equipments}
+            <div className="host">
+                <StarRating rating={logement.rating} size='15' />
+                <p>{logement.host.name}</p> 
+                <img src={logement.host.picture} className="hostPicture" alt={logement.host.name}/>
+            </div>
+            
+            <div className="tag-button" data-name="description"><h3>Description</h3> <RotatingSymbol/></div>
+                        
+            <div className="description">{logement.description}</div>
+             {logement.equipments}
         </div>
     );
 };
