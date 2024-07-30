@@ -4,6 +4,7 @@ import data from '../../logements.json';
 import StarRating from './StarRating';
 import Carousel from './Carousel'; 
 import RotatingSymbol from './RotatingSymbol'; 
+import Description from './Description';
 import './Sheet.scss'
 
 const Sheet = () => {
@@ -49,9 +50,8 @@ const Sheet = () => {
                 <img src={logement.host.picture} className="hostPicture" alt={logement.host.name}/>
             </div>
             
-            <div className="tag-button" data-name="description"><h3>Description</h3> <RotatingSymbol/></div>
-                        
-            <div className="description">{logement.description}</div>
+            <Description logement={logement} />
+            
              {logement.equipments}
         </div>
     );

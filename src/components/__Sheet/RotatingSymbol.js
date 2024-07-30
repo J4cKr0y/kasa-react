@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-function RotatingSymbol() {
+function RotatingSymbol({ onToggle }) {
     const [isRotated, setIsRotated] = useState(false);
 
     const handleClick = () => {
         setIsRotated(!isRotated);
+        onToggle();
     };
-
     return (
         <div 
             className={`rotate-symbol ${isRotated ? 'rotated' : ''}`} 
@@ -16,5 +16,4 @@ function RotatingSymbol() {
         </div>
     );
 }
-
 export default RotatingSymbol;

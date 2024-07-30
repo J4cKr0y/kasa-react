@@ -128,6 +128,14 @@
 .rotate-symbol.rotated {
     transform: rotate(180deg);
 }
-.description{
-    display: none;
+
+.description {
+  display: none;
+  transition: max-height 0.2s ease-out;
+  overflow: hidden;
+}
+
+.description[data-open=true] {
+  display: flex;
+  transition: max-height 0.2s ease-in;
 }

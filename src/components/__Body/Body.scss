@@ -14,24 +14,29 @@
     
 
     .__body--banner1 {
-        @include flex(column, center, first baseline);
-        width: 89.3%;
-        height: 111px;
-        background-color: $primary-color;
-        //background-image: url($img_banner1);
-        border: 1px solid $primary-color;
-        overflow: overlay;
-        margin-top: 27px;
-        border-radius: 10px;
-        color: $ft_secondary-color;
-    }
-    .__body--banner1::before {
-        content: $slogan;
-        padding-left: 2%;
-        font-size: 24px;
-        font-weight: 700;
-        font-family: $font;
-    }
+  @include flex(column, center, first baseline);
+  width: 89.3%;
+  height: 111px;
+  overflow: overlay;
+  align-items: center;
+  margin-top: 27px;
+  border-radius: 10px;
+  color: $ft_secondary-color;
+  position: relative; 
+}
+
+.__body--banner1-text {
+  position: absolute;
+  padding-left: 2%;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: $font;
+}
+
+.__body--banner1 img {
+  width: 100%;
+  filter: brightness(60%);
+}
     .__body--contain_thb {
         @include flex(column, flex-start, center);
         width: 89.3%;
