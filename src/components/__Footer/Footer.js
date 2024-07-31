@@ -1,3 +1,4 @@
+/* Footer displaying the Kasa logo and a copyright notice. */
 import './Footer.scss'
 import logo_kasa_ft from '../../img/logo_kasa_ft.png';
 

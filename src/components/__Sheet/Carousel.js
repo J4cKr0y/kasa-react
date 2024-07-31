@@ -1,3 +1,4 @@
+/*Component displaying a carousel of images with navigation buttons. */
 import React from 'react';
 
 const Carousel = ({ images, currentIndex, nextSlide, prevSlide }) => {

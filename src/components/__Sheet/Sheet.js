@@ -1,14 +1,14 @@
+/*Component displaying details of a specific logement. */
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../../logements.json'; 
 import StarRating from './StarRating';
 import Carousel from './Carousel'; 
-import RotatingSymbol from './RotatingSymbol'; 
-import Description from './Description';
+import Collapse from '../Collapse/Collapse';
 import './Sheet.scss'
 
 const Sheet = () => {
-    const { id } = useParams();
+    const { id } = useParams(); 
     const [logement, setLogement] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -50,9 +50,9 @@ const Sheet = () => {
                 <img src={logement.host.picture} className="hostPicture" alt={logement.host.name}/>
             </div>
             
-            <Description logement={logement} />
+            <Collapse title="Description" txt={logement.description} />
+            <Collapse title="Équipements" txt={logement.equipments} />
             
-             {logement.equipments}
         </div>
     );
 };

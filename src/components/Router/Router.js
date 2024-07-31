@@ -1,3 +1,4 @@
+/*Component seting up the routes for the Home, About, Fiche, and NotFound pages.*/
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from '../../pages/Home';

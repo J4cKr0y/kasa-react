@@ -1,4 +1,4 @@
-/* component that represents a single 'Logement' item with a link to its details page. */
+/* Component that represents a single 'Logement' item with a link to its details page. */
 
 import React from 'react';
 import { Link } from 'react-router-dom';

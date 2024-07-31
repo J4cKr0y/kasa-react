@@ -1,3 +1,4 @@
+/*Component for rendering a logo with an image and title. */
 import React from 'react';
 
 function Logo({class_name, img_src , alt, title}) {
