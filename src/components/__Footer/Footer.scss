@@ -5,6 +5,9 @@
     height: 209px;
     max-width: 375px;
     background-color: $ft_primary-color;
+    @media screen and (min-width: 1024px) {
+            max-width: 1440px;
+        }
         img{
             height: 39.4px;
             width: 32.5%;  

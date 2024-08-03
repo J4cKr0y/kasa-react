@@ -43,7 +43,7 @@ function Collapse({ title, txt }) {
   };
 const containerStyle = {
     overflow: 'hidden',
-    maxHeight: isOpen ? '100px' : '0',
+    maxHeight: isOpen ? '100%' : '0',
     transition: 'max-height 0.5s ease-out',
   };
 
@@ -61,7 +61,7 @@ const containerStyle = {
         <span>{title}</span>
         <span style={symbolStyle}>^</span>
       </div> <br /> 
-      <div style={containerStyle}>
+      <div style={containerStyle} className="containerTxt">
         <div style={txtStyle} className={title+"_text"}>{txt}</div><br />
       </div>
     </div>
