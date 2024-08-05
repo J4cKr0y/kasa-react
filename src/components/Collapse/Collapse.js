@@ -9,7 +9,6 @@ function Collapse({ title, txt }) {
   };
 
   const collapseStyle = {
-    textAlign: 'center',
     flexDirection : 'column',
     display: 'flex',
     width: '100%',
@@ -19,7 +18,7 @@ function Collapse({ title, txt }) {
     display: 'flex',
     backgroundColor: '#FF6060',
     borderRadius: '5px',
-    fontFamily: "'Montserrat Ace Medium', Times, serif",
+    fontFamily: "'Montserrat', Times, serif",
     color: 'white',
     fontWeight: '700',
     alignItems: 'center',
@@ -43,16 +42,19 @@ function Collapse({ title, txt }) {
   };
 const containerStyle = {
     overflow: 'hidden',
+    width: '90%',
     maxHeight: isOpen ? '100%' : '0',
     transition: 'max-height 0.5s ease-out',
   };
 
   const txtStyle = {
+    fontWeight: '500',
+    fontSize: '13px',
     transform: isOpen ? 'translateY(0)' : 'translateY(-100%)',
     transition: 'transform 0.5s ease-out',
     width: '89.3%',
     overflow: 'hidden',
-    marginLeft: '5%',
+    margin: '0 10% 0 10%',
   };
 
   return (
@@ -62,7 +64,15 @@ const containerStyle = {
         <span style={symbolStyle}>^</span>
       </div> <br /> 
       <div style={containerStyle} className="containerTxt">
-        <div style={txtStyle} className={title+"_text"}>{txt}</div><br />
+        <div style={txtStyle} className={title+"_text"}>
+          {Array.isArray(txt) ? (
+          txt.map((item, index) => (
+            <div key={index}>{item}</div>
+          ))
+          ) : (
+          <p>{txt}</p>
+          )}
+        </div><br />
       </div>
     </div>
   );

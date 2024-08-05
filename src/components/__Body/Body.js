@@ -5,8 +5,8 @@ import backgroundImage from '../../img/home.jpg';
 import DivImg from '../Utils/DivImg';
 import data from '../../logements.json'; 
 import Logement from './Logement';
+const slogan = ["Chez vous,", "partout et ailleurs"];
 
-const slogan= "Chez vous, partout et ailleurs";
 const Body = () => {
     return (
         <div className='__body'>
