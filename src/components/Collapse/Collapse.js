@@ -1,5 +1,6 @@
 /*Component that renders a collapsible section with a title and text content. */
 import React, { useState } from 'react';
+import V from '../../img/V.png'
 
 function Collapse({ title, txt }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,6 +30,7 @@ function Collapse({ title, txt }) {
     textIndent: '0.6rem',
     marginLeft: '5%',
     cursor: 'pointer',
+    border: 'none',
   };
 
   const symbolStyle = {
@@ -54,15 +56,15 @@ const containerStyle = {
     transition: 'transform 0.5s ease-out',
     width: '89.3%',
     overflow: 'hidden',
-    margin: '0 10% 0 10%',
+    margin: '-1rem 10% 0 10%',
   };
 
   return (
     <div className="Collapse" style={collapseStyle}>
-      <div style={buttonStyle} className={title} onClick={handleToggle}>
+      <button style={buttonStyle} className={title} onClick={handleToggle} >
         <span>{title}</span>
-        <span style={symbolStyle}>^</span>
-      </div> <br /> 
+        <span style={symbolStyle}><img src={V} /></span>
+      </button> <br /> 
       <div style={containerStyle} className="containerTxt">
         <div style={txtStyle} className={title+"_text"}>
           {Array.isArray(txt) ? (
