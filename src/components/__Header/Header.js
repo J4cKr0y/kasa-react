@@ -9,8 +9,8 @@ function Header() {
     const {logo} = useMyVars();
     const title = 'Kasa'
     const links = [
-  { path: "/", name: "Accueil" },
-  { path: "/about", name: "À propos" },
+  { path: "/", name: "ACCUEIL" },
+  { path: "/about", name: "À PROPOS" },
 ];
     return (    
     <div className='__header'>
