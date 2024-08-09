@@ -1,0 +1,29 @@
+@import '../SASS/main';
+
+.__page404{
+    @include flex(column, center, center);
+    max-width: 375px;
+    width: 89.3%;
+    text-align: center;
+    h1 {
+        padding-top: 30px;
+        font-size: 88px;
+        font-weight: 700;
+        font-family: $font;
+        color: $primary-color;
+    }
+    h2{
+        width: 69.3%;
+        font-size: 18px;
+        font-weight: 500;
+        font-family: $font;
+        color: $primary-color;
+    }
+    a{
+        margin : 65px 0 85px 0;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: $font;
+        color: black;
+    }
+}

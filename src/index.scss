@@ -1,14 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import 'components/SASS/mixins';
+
+html,
 body {
   margin: 0;
-  font-family: 'Montserrat Ace Medium', 'Montserrat', Times, serif;
+  font-family: 'Montserrat', Times, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @include flex(column, flex-start, center);
-  max-height: 1268px;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  max-width: 375px;
+  overflow-x: hidden !important;
+    @media screen and (min-width: 1024px) {
+        max-width: 1440px;
+      }
 }
