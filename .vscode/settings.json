@@ -1,0 +1,10 @@
+{
+    "workbench.editor.wrapTabs": true,
+    "workbench.editorAssociations": {
+        "*.css": "right",
+        "*.scss": "right",
+        "*.html": "left",
+        "*.js": "left",
+        "*.jsx": "left"
+    }
+}

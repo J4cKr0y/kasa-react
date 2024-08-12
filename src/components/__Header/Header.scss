@@ -1,49 +1,69 @@
 @import '../SASS/main';
 
-.__header{
+.__header {
     @include flex(row, center, center);
     max-width: 375px;
     width: 89.3%;
     height: 46.9px;
-    margin-top: 20px;
-        @media screen and (min-width: 1024px) {
-            max-width: 1440px;
-        }
-            .__header--logo{
-                display: flex;
-                width: 44.6%;
-                    h1{
-                        font-size: 0%;
-                        img{
-                            height: 46.8px;
-                        }
-                    }
+    margin: 20px auto 0 auto;
+
+    @media screen and (min-width: 1024px) {
+        width: 100%;
+        max-width: 1440px;
+        margin: 60px auto 40px auto;
+    }
+
+    .__header--logo {
+        display: flex;
+        width: 44.6%;
+
+        h1 {
+            font-size: 0%;
+
+            img {
+                height: 46.8px;
+                @media screen and (min-width: 1024px) {
+                    height: 68px;
+                }
             }
-        .__header--nav{
-            display: flex;
-            text-wrap: nowrap;
-            height: 46.8px;
-            width: 44.6%;
-            
-                li{
-                    display: inline;
-                }
-                li:nth-child(1){
-                    margin-right: 21%;
-                }
-                    li a{
-                        color: $ft_primary-color;
-                        font-weight: 700;
-                        font-size: 12px;
-                        text-decoration: none;
-                            @media screen and (min-width: 1024px) {
-                            text-transform: lowercase;
-                            font-size: 24px;
-                            }
-                    }
-                    li.active a {
-                                text-decoration: underline;
-                    }
-                
         }
+    }
+
+    .__header--nav {
+        display: flex;
+        text-wrap: nowrap;
+        height: 46.8px;
+        width: 44.6%;
+        @media screen and (min-width: 1024px) {
+            justify-content: right;
+            }
+
+        li {
+            display: inline;
+        }
+
+        li:nth-child(1) {
+            margin-right: 21%;
+            @media screen and (min-width: 1024px) {
+                margin-right: 45%;
+                margin-left: -45%;
+                }
+        }
+
+        li a {
+            color: $ft_primary-color;
+            font-weight: 700;
+            font-size: 12px;
+            text-decoration: none;
+            text-transform: uppercase;
+            @media screen and (min-width: 1024px) {
+                text-transform: capitalize;
+                font-size: 24px;
+            }
+        }
+        li.active a {
+            text-decoration: underline;
+        }
+        
+    }
 }

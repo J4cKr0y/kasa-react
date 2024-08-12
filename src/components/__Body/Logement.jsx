@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Logement = ({ logement }) => (
-  <div key={logement.id} data-imgtitle={logement.title} className='__body--contain_thb--thumb'>
+  <div key={logement.id.toString()} data-imgtitle={logement.title} className='__body--contain_thb--thumb'>
     <Link to={`/fiche/${logement.id}`}>
       <img src={logement.cover} alt={logement.title} />
     </Link>
