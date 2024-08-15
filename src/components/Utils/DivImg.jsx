@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import GenUniKey from './GenUniKey';
 
 function DivImg({ className, src, alt, txt }) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
