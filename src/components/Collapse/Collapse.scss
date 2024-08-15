@@ -4,10 +4,16 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-
     @media screen and (min-width: 1024px) {
         gap: 16px;
     }
+        &[data-title="Description"], &[data-title="Équipements"] {
+            @media screen and (min-width: 1024px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 50%;
+            }
+        }
 
     button {
         @include flex(row, space-between, center);
@@ -27,6 +33,14 @@
         @media screen and (min-width: 1024px) {
             height: 52px;
             font-size: 24px;
+        }
+    }
+
+    .Description, .Équipements {
+        @media screen and (min-width: 1024px) {
+            font-size: 18px;
+            margin-top: 13px;
+            margin-bottom: 34px;
         }
     }
 
@@ -63,6 +77,16 @@
             margin: -20px 0 0 1%;
         }
 
+.Description_text,
+.Équipements_text {
+    @media screen and (min-width: 1024px) {
+        font-size: 18px;
+        width: 84.3%;
+        margin-top: -20px;
+        margin-left: 7%;
+    }
+}
+
         .Fiabilité_text,
         .Respect_text,
         .Service_text,
@@ -71,11 +95,11 @@
             font-size: 13px;
             font-weight: 500;
             overflow: hidden;
-            margin: -1rem 10% 0 10%;
+            margin: -1.5rem 10% 0 10%;
 
             @media screen and (min-width: 1024px) {
                 font-size: 18px;
-                margin: 0 auto 0 auto;
+                margin: -1rem auto 0 auto;
             }
         }
     }

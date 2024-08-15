@@ -1,30 +1,29 @@
-/*Component displaying a star rating based on the given rating value. */
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import star_orange from '../../img/star_orange.svg';
 import star_grey from '../../img/star_grey.svg';
 
 function StarRating({ rating, size }) {
   const [sizeAdapt, setSizeAdapt] = useState(size);
 
-  const updateSizeAdapt = () => {
+  const updateSizeAdapt = useCallback(() => {
     if (window.innerWidth < 1024) {
       setSizeAdapt(size);
     } else {
-      setSizeAdapt(size * 1.5);
+      setSizeAdapt(size * 1.66);
     }
-  };
+  }, [size]);
 
   useEffect(() => {
     updateSizeAdapt();
     window.addEventListener('resize', updateSizeAdapt);
     return () => window.removeEventListener('resize', updateSizeAdapt);
-  }, [size]);
+  }, [size, updateSizeAdapt]);
 
   return (
     <div className='StarRating'>
-      {[1, 2, 3, 4, 5].map((star, index) => (
+      {[1, 2, 3, 4, 5].map((star) => (
         <img
-          key={index}
+          key={`StarRating-${star}`}
           src={rating >= star ? star_orange : star_grey}
           style={{
             width: `${sizeAdapt}px`,

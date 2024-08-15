@@ -26,7 +26,7 @@ const containerStyle = {
   };
 
   return (
-    <div className="Collapse">
+    <div className="Collapse" data-title={title}>
       <button className={title}  onClick={handleToggle} >
         <span>{title}</span>
         <span className="symbol" style={symbolStyle}><img src={V} alt="Symbole interactif"/></span>

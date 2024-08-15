@@ -1,3 +1,6 @@
+import React from 'react';
+import { render } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 import Collapse from "./Collapse";
 
 describe('The Collapse component'), () => {
@@ -11,3 +14,4 @@ describe('The Collapse component'), () => {
           expect(container).toBeInTheDocument();
     });
 }
+

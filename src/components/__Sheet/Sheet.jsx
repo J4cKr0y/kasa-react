@@ -47,9 +47,11 @@ const Sheet = () => {
                 <StarRating rating={logement.rating} size='15' />
                 <p>{logement.host.name}</p> 
                 <img src={logement.host.picture} className="hostPicture" alt={logement.host.name}/>
-            </div>     
+            </div>   
+            <div className="sheet_collapse">
             <Collapse title="Description" txt={logement.description} />
-            <Collapse title="Équipements" txt={logement.equipments} />      
+            <Collapse title="Équipements" txt={logement.equipments} />   
+            </div>   
         </div>
     );
 };
