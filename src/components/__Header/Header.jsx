@@ -8,8 +8,8 @@ import Nav from './Nav';
 function Header() {
     const title = 'Kasa';
     const links = [
-  { path: "/", name: "ACCUEIL" },
-  { path: "/about", name: "À PROPOS" },
+  { path: "/", name: "Accueil" },
+  { path: "/about", name: "À Propos" },
 ];
     return (    
     <div className='__header'>

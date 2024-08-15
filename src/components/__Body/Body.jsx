@@ -15,7 +15,7 @@ const Body = () => {
 
             <div className='__body--contain_thb'>
                 {data.map((logement) => (
-                    <Logement key={logement} logement={logement} />
+                    <Logement key={logement.id} logement={logement} />
                 ))}
             </div>
 
