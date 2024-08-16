@@ -1,66 +1,82 @@
 @import '../SASS/main';
 
-.__Sheet{
+.__Sheet {
     @include flex(column, flex-start, flex-start);
     max-width: 375px;
     width: 100%;
+
     @media screen and (min-width: 1024px) {
-            max-width: 1440px;
-        }
+        max-width: 1440px;
+    }
 }
-.__Sheet--carousel{
+
+.__Sheet--carousel {
     @include flex(column, flex-start, center);
     object-fit: cover;
     overflow: hidden;
+
     @media screen and (min-width: 1024px) {
-    order: 0;
-    width: 100%;
-    margin-top: -115px;
+        width: 100%;
     }
 }
-.__Sheet--carousel-image{
+
+.__Sheet--carousel-image {
     width: 89.3%;
     height: 255px;
     border-radius: 10px;
+
     @media screen and (min-width: 1024px) {
-    height: 415px;
+        height: 415px;
+        margin-top: -115px;
     }
 }
-.__Sheet--carousel-button{
+
+.__Sheet--carousel-button {
     border: none;
     background-color: transparent;
     color: white;
     font-size: 24px;
+    cursor: pointer;
+
     @media screen and (min-width: 1024px) {
-    font-size: 100px;
+        font-size: 100px;
     }
 }
-.__Sheet--carousel-button:nth-child(1){
+
+.__Sheet--carousel-button:nth-child(1) {
     position: relative;
     right: 40%;
     top: 150px;
+
     @media screen and (min-width: 1024px) {
-    top: 250px;
+        top: 150px;
+        right: 41%;
     }
 }
-.__Sheet--carousel-button:nth-child(3){
+
+.__Sheet--carousel-button:nth-child(3) {
     position: relative;
     left: 40%;
     bottom: 140px;
+
     @media screen and (min-width: 1024px) {
-    bottom: 300px;
+        bottom: 285px;
+        left: 41.3%;
     }
 }
+
 .__Sheet--carousel-counter {
     position: relative;
     bottom: 65px;
     color: white;
-    visibility: hidden;  
+    visibility: hidden;
+
     @media screen and (min-width: 1024px) {
         visibility: visible;
         bottom: 190px;
     }
 }
+
 .__Sheet h1 {
     @include flex(column, flex-start, flex-start);
     text-align: left;
@@ -70,13 +86,15 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 1.8rem;
+
     @media screen and (min-width: 1024px) {
-    font-size: 36px;
-    font-weight: 600;
-    margin-top: -110px;
-    width: 70%;
+        font-size: 36px;
+        font-weight: 600;
+        margin-top: -110px;
+        width: 70%;
     }
 }
+
 .__Sheet h2 {
     @include flex(column, flex-start, flex-start);
     text-align: left;
@@ -85,27 +103,31 @@
     color: $ft_primary-color;
     font-weight: 500;
     font-size: 14px;
+
     @media screen and (min-width: 1024px) {
-    font-size: 18px;
-    font-weight: 600;
-    margin-top: 13px;
-    margin-bottom: 25px;
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 13px;
+        margin-bottom: 25px;
     }
 }
-.tags{
+
+.tags {
     display: flex;
     flex-direction: row;
     width: 89.3%;
     gap: 3%;
     margin-left: 5%;
+
     @media screen and (min-width: 1024px) {
-    width: 70%;
-    height: 25px;
-    margin-bottom: 30px;
+        width: 70%;
+        height: 25px;
+        margin-bottom: 30px;
     }
-    
+
 }
-.tag-button{
+
+.tag-button {
     display: flex;
     background-color: $primary-color;
     width: 22.4%;
@@ -119,64 +141,72 @@
     justify-content: center;
     align-items: center;
     text-wrap: nowrap;
+
     @media screen and (min-width: 1024px) {
-    height: 100%;
-    width: 13%;
-    font-size: 14px;
-    border-radius: 8px;
+        height: 100%;
+        width: 13%;
+        font-size: 14px;
+        border-radius: 8px;
     }
 }
 
-.host{
+.host {
     display: flex;
     flex-direction: row;
-    width:52%;
+    width: 52%;
     font-family: $font;
     color: $primary-color;
     font-weight: 500;
-    font-size: 14px; 
+    font-size: 14px;
     text-align: right;
     align-content: center;
+
     @media screen and (min-width: 1024px) {
-    margin-top: -140px;
-    flex-direction: column-reverse;
-    align-items: center;
-    width: 20%;
-    margin-left: 75%;
+        margin-top: -140px;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 20%;
+        margin-left: 75%;
     }
 
-.StarRating {
-    display: flex;
-    align-content: left;
-    width: 50%;
-    margin: 25px 10% 20px;
-    @media screen and (min-width: 1024px) {
-    font-size: 24px;
+    .StarRating {
+        display: flex;
+        align-content: left;
+        width: 50%;
+        margin: 25px 10% 20px;
+
+        @media screen and (min-width: 1024px) {
+            font-size: 24px;
+        }
     }
-}
 
 }
-.host p{
+
+.host p {
     margin-left: 60%;
+
     @media screen and (min-width: 1024px) {
-    margin-left: 0;
-    margin-top: -50px;
-    font-size: 18px;
-    width: 40%;
+        margin-left: 0;
+        margin-top: -50px;
+        font-size: 18px;
+        width: 40%;
     }
 }
-.hostPicture{
-    width: 32px; 
-    height: 32px; 
-    object-fit: cover; 
+
+.hostPicture {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
     margin: 15px 5%;
     clip-path: circle(50%);
+
     @media screen and (min-width: 1024px) {
-    width: 64px;
-    height: 64px;
-    margin: -25px 0 0 75%;
+        width: 64px;
+        height: 64px;
+        margin: -25px 0 0 75%;
     }
 }
+
 .sheet_collapse {
     @media screen and (min-width: 1024px) {
         display: flex;
