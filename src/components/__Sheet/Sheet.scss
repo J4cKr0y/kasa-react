@@ -189,7 +189,7 @@
         margin-left: 0;
         margin-top: -50px;
         font-size: 18px;
-        width: 40%;
+        width: 30%;
     }
 }
 
@@ -211,5 +211,6 @@
     @media screen and (min-width: 1024px) {
         display: flex;
         flex-direction: row;
+        margin: 0 -1% 0 -1%;
     }
 }

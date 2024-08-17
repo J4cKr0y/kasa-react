@@ -59,8 +59,15 @@
 
     .Sécurité {
         @media screen and (min-width: 1024px) {
-            margin-bottom: 8px;
+            margin-top: 29px;
+            margin-bottom: 37px;
         }
+    }
+
+    .Respect, .Service {
+        @media screen and (min-width: 1024px) {
+                margin-top: 29px;
+            }
     }
 
     .symbol {
@@ -75,14 +82,14 @@
     }
 
     .containerTxt {
+        display: flex;
         width: 90%;
-        height: auto;
+        height: 200px;
         overflow: hidden;
-
         @media screen and (min-width: 1024px) {
-            width: 80.5%;
-            height: 120px;
-            margin: -20px auto 0 auto;
+            width: 75%;
+            margin: -50px 13.5% 0 auto;
+            background-color: #FBFBFB;
         }
 
         .Description_text,
@@ -90,7 +97,7 @@
             @media screen and (min-width: 1024px) {
                 font-size: 18px;
                 width: 84.3%;
-                margin-top: -20px;
+                padding-top: 7px;
                 margin-left: 7%;
             }
         }
