@@ -36,7 +36,7 @@
         @media screen and (min-width: 1024px) {
             height: 52px;
             font-size: 24px;
-            width: 75%;
+            width: 82.5%;
             margin-left: auto;
             margin-right: auto;
         }
@@ -59,15 +59,19 @@
 
     .Sécurité {
         @media screen and (min-width: 1024px) {
-            margin-top: 29px;
-            margin-bottom: 37px;
+           // margin-top: 29px;
+           // margin-bottom: 37px;
+           margin-bottom: 3px;
         }
     }
 
-    .Respect, .Service {
+    .Respect,
+    .Service, 
+    .Sécurité {
         @media screen and (min-width: 1024px) {
-                margin-top: 29px;
-            }
+           // margin-top: 29px;
+           margin-top: -5px;
+        }
     }
 
     .symbol {
@@ -84,37 +88,50 @@
     .containerTxt {
         display: flex;
         width: 90%;
-        height: 200px;
+        height: auto;
         overflow: hidden;
+        background-color: #FBFBFB;
+        border-radius: 5px;
+        margin: 0 auto 0 auto;
+
         @media screen and (min-width: 1024px) {
-            width: 75%;
-            margin: -50px 13.5% 0 auto;
-            background-color: #FBFBFB;
+            width: 82.5%;
+            margin: -16px auto 0 auto;
         }
 
         .Description_text,
         .Équipements_text {
+            font-size: 12px;
+            font-weight: 500;
+            overflow: hidden;
+            margin: 0 5% 0 5%;
+
             @media screen and (min-width: 1024px) {
-                font-size: 18px;
-                width: 84.3%;
-                padding-top: 7px;
-                margin-left: 7%;
+            font-size: 18px;
+            width: 84.3%;
+            padding-top: 7px;
+            margin-left: 7%;
             }
         }
 
+        .Équipements_text {
+            margin: 1rem 0 1rem 5%;
+        }
+        
         .Fiabilité_text,
         .Respect_text,
         .Service_text,
         .Sécurité_text {
-            width: 89.3%;
-            font-size: 13px;
+            width: 88%;
+            font-size: 12px;
             font-weight: 500;
             overflow: hidden;
-            margin: -16px 10% 0 10%;
+            margin: -16px auto 0 auto;
 
             @media screen and (min-width: 1024px) {
+                width: 96%;
                 font-size: 18px;
-                margin: -16px auto 0 auto;
+                margin: -20px auto 0 auto;
             }
         }
     }

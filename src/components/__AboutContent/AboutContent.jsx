@@ -1,4 +1,5 @@
 import '../__Body/Body.scss'
+import './AboutContent.scss'
 import React, { useState, useEffect } from 'react';
 import DivImg from '../Utils/DivImg';
 import Collapse from '../Collapse/Collapse';

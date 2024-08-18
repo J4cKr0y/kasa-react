@@ -1,10 +1,30 @@
 {
     "workbench.editor.wrapTabs": true,
-    "workbench.editorAssociations": {
-        "*.css": "right",
-        "*.scss": "right",
-        "*.html": "left",
-        "*.js": "left",
-        "*.jsx": "left"
-    }
+    "workbench.editorAssociations": [
+        {
+            "viewType": "default",
+            "filenamePattern": "*.css",
+            "sideBySide": "right"
+        },
+        {
+            "viewType": "default",
+            "filenamePattern": "*.scss",
+            "sideBySide": "right"
+        },
+        {
+            "viewType": "default",
+            "filenamePattern": "*.html",
+            "sideBySide": "left"
+        },
+        {
+            "viewType": "default",
+            "filenamePattern": "*.js",
+            "sideBySide": "left"
+        },
+        {
+            "viewType": "default",
+            "filenamePattern": "*.jsx",
+            "sideBySide": "left"
+        }
+    ]
 }

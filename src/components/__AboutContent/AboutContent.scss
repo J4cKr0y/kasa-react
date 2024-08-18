@@ -1,0 +1,10 @@
+@import '../SASS/main';
+
+
+
+.__body {
+
+    @media screen and (min-width: 1024px) {
+        margin-top: -15px;
+    }
+}

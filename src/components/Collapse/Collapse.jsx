@@ -30,18 +30,18 @@ const containerStyle = {
       <button className={title}  onClick={handleToggle} >
         <span>{title}</span>
         <span className="symbol" style={symbolStyle}><img src={V} alt="Symbole interactif"/></span>
-      </button> <br /> 
+      </button> 
       <div style={containerStyle} className="containerTxt">
         <div style={txtStyle} className={title+"_text"}>
           {Array.isArray(txt) ? (
           txt.map((item, index) => (
-            <div key={index}>{item}</div>
+            <div key={index} className={title+"_content"}>{item}</div>
           ))
           ) : (
           <p>{txt}</p>
           )}
-        </div><br />
-      </div>
+        </div>
+      </div><br />
     </div>
   );
 }
