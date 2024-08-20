@@ -5,10 +5,6 @@
     flex-direction: column;
     width: 100%;
 
-    @media screen and (min-width: 1024px) {
-        gap: 16px;
-    }
-
     &[data-title="Description"],
     &[data-title="Équipements"] {
         @media screen and (min-width: 1024px) {
@@ -54,23 +50,21 @@
     .Fiabilité {
         @media screen and (min-width: 1024px) {
             margin-top: -16px;
-        }
-    }
-
-    .Sécurité {
-        @media screen and (min-width: 1024px) {
-           // margin-top: 29px;
-           // margin-bottom: 37px;
-           margin-bottom: 3px;
+            margin-bottom: 59px;
         }
     }
 
     .Respect,
-    .Service, 
+    .Service,
     .Sécurité {
         @media screen and (min-width: 1024px) {
-           // margin-top: 29px;
-           margin-top: -5px;
+            margin-bottom: 59px;
+        }
+    }
+
+    .Sécurité {
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 67px;
         }
     }
 
@@ -93,10 +87,11 @@
         background-color: #FBFBFB;
         border-radius: 5px;
         margin: 0 auto 0 auto;
+        z-index: -1;
 
         @media screen and (min-width: 1024px) {
             width: 82.5%;
-            margin: -16px auto 0 auto;
+            margin: -48px auto 0 auto;
         }
 
         .Description_text,
@@ -104,20 +99,20 @@
             font-size: 12px;
             font-weight: 500;
             overflow: hidden;
-            margin: 0 5% 0 5%;
+            margin: 1rem 5% 0 5%;
+
 
             @media screen and (min-width: 1024px) {
-            font-size: 18px;
-            width: 84.3%;
-            padding-top: 7px;
-            margin-left: 7%;
+                font-size: 18px;
+                width: 84.3%;
+                margin-left: 7%;
             }
         }
 
         .Équipements_text {
             margin: 1rem 0 1rem 5%;
         }
-        
+
         .Fiabilité_text,
         .Respect_text,
         .Service_text,
@@ -126,12 +121,12 @@
             font-size: 12px;
             font-weight: 500;
             overflow: hidden;
-            margin: -16px auto 0 auto;
+            margin: 0 auto 0 auto;
 
             @media screen and (min-width: 1024px) {
                 width: 96%;
                 font-size: 18px;
-                margin: -20px auto 0 auto;
+                margin-top: -20px;
             }
         }
     }

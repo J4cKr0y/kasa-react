@@ -5,7 +5,7 @@ import Carousel from './Carousel';
 
 const images = ['image1.jpg', 'image2.jpg', 'image3.jpg'];
 
-describe('The Carrousel component'), () => {
+describe('The Carrousel component', () => {
 
 
 it('should render Carousel component', () => {
@@ -46,4 +46,4 @@ it('should not display the counter and navigation buttons if there is only one i
 });
 
 
-}
+});

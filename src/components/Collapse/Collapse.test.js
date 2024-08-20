@@ -1,9 +1,9 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, act } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import Collapse from "./Collapse";
 
-describe('The Collapse component'), () => {
+describe('The Collapse component', () => {
     it('should render with title and text content when provided', () => {
           const { getByText } = render(<Collapse title="Test Title" txt="Test Content" />);
           expect(getByText('Test Title')).toBeInTheDocument();
@@ -13,5 +13,5 @@ describe('The Collapse component'), () => {
           const { container } = render(<Collapse title="" txt="Test Content" />);
           expect(container).toBeInTheDocument();
     });
-}
+});
 
