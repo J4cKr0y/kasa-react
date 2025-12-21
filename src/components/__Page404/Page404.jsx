@@ -1,9 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Page404.scss';
-
-const links = [
-  { path: "/", name: "Retourner sur la page d'accueil" },
-];
 
 function Page404() {
     return (
@@ -12,7 +9,7 @@ function Page404() {
             <br/>
             <h2>Oups! La page que vous demandez n'existe pas.</h2> 
             <br/>
-                <a href={links[0].path}>{links[0].name}</a>
+            <Link to="/">Retourner sur la page d'accueil</Link>
             <br/>
         </div>
     );
